@@ -84,18 +84,6 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  void addDataToFirebase() {
-    try {
-      databaseReference.collection("items").add({
-        "text": "Lire un livre pendant 30 minutes",
-      }).then((value) {
-        print(value.id);
-      });
-    } catch (e) {
-      print(e.toString());
-    }
-  }
 }
 
 class ListSection extends StatelessWidget {
@@ -209,4 +197,3 @@ class FormSection extends StatelessWidget {
     }
   }
 }
-
